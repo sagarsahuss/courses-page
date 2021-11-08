@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: "Roboto";
+}
+@media(max-width:1150px){
+    html{
+        font-size: 80%;
+    }
+    
+}
+@media(max-width:850px){
+    html{
+        font-size: 60%;
+    }
+}
+@media(max-width:700px){
+    html{
+        font-size: 50%;
+    }
+}
+@media(max-width:530px){
+    html{
+        font-size: 40%;
+    }
+}
+@media(min-width:400px){
+    .container-1{
+        height: 20%;
+        background-color: antiquewhite;
+        display: flex;
+    }
+    .top-icon{
+        width: 40%;
+        padding: 5% 0%;
+    }
+    .top-icon img{
+        margin-left: 55%;
+        width: 12rem;
+    }
+    .top-text-box{
+        padding: 3% 0;
+    }
+}
+@media(max-width:400px){
+    html{
+        text-align: center;
+    }
+    .top-icon img{
+        width: 8rem;
+    }
+    .container-1{
+        padding: 5% 0;
+    }
+}
+
+.container-1{
+    background-color: brown;
+    color: white;
+}
+.top-text-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.top-text-box h2 , h1{
+    font-size: 3rem;
+}
+.top-text-box p{
+    font-size: 1.5rem;
+}
+
+/* container-3 */
+.container-3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3% 0;
+}
+.faq{
+    width: 60%;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid black;
+    cursor: pointer;
+}
+.question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.question h3{
+    font-size: 2rem;
+}
+.answer{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.4s ease;
+}
+ul{
+    padding: 1% 0 1% 10%;
+    line-height: 2;
+}
+ul li{
+    font-size: 1.4rem;
+    text-align: left;
+}
+
+/* .answer p{
+    padding-top: 1rem;
+    line-height: 1.6;
+    font-size: 1.4rem;
+} */
+.faq.active .answer{
+    max-height: 1000px;
+    animation: fade 1s ease-in-out;
+}
+
+.faq.faq.active i{
+    transform: rotate(180deg);
+}
+i{
+    transition: transform 0.5s ease-in;
+}
+
+
+@keyframes fade{
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
