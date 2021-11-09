@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: "Open Sans";
+}
+@media(max-width:1150px){
+    html{
+        font-size: 80%;
+    }
+}
+@media(max-width:850px){
+    html{
+        font-size: 60%;
+    }
+}
+@media(max-width:700px){
+    html{
+        font-size: 50%;
+    }
+}
+@media(min-width:500px){
+    .curriculum{
+        width: 70%;
+        padding-top: 2%;
+    }
+    .course-details{
+        position: sticky;
+        top: 2rem;
+        height: 27rem;
+    }
+
+
+}
+@media(max-width:500px){
+    html{
+        font-size: 40%;
+    }
+    .container-2{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .curriculum{
+        width: 100%;
+    }
+    .course-details{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 50%;
+        width: 60%;
+    }
+    .course-details div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+    }
+}
+@media(max-width:400px){
+    html{
+        font-size: 30%;
+    }
+}
+
+.container-1{
+    display: flex;
+    background-color: rgb(143, 90, 212);
+    color: white;
+}
+.top-icon{
+    padding: 3% 0% 3% 2%;
+    width: 80%;
+}
+.top-icon img{
+    width: 90%;
+}
+.top-text-box{
+    display: flex;
+    flex-direction: column;
+    margin: 5% 0% 5% 10%;
+}
+h1{
+    font-size: 3rem;
+}
+.top-text-box p{
+    font-size: 1.5rem;
+    margin-top: 5%;
+}
+.top-text-box button{
+    width: 50%;
+    height: 3rem;
+    font-size: 1.5rem;
+    margin: 5% 0;
+    background-color: rgb(26, 26, 26);
+    color: white;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+/* container-2 */
+.container-2{
+    display: flex;
+}
+.curriculum, .faq-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
+}
+.label{
+    color: rgb(143, 90, 212);
+    margin-top: 1rem;
+    margin-bottom: -1.5rem;
+}
+.faq{
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid black;
+    cursor: pointer;
+}
+.container-2 .faq{
+    width: 80%;
+}
+.question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h3{
+    font-size: 2rem;
+}
+.answer{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.4s ease;
+}
+ul{
+    padding: 1% 0 1% 10%;
+    line-height: 2;
+}
+ul li{
+    font-size: 1.4rem;
+    text-align: left;
+}
+.answer p{
+    padding-top: 1rem;
+    line-height: 1.6;
+    font-size: 1.4rem;
+}
+.faq.active .answer{
+    max-height: max-content;
+    animation: fade 1s ease-in-out;
+}
+
+.faq.faq.active i{
+    transform: rotate(180deg);
+}
+i{
+    transition: transform 0.5s ease-in;
+}
+
+.course-details{
+    margin: 4% 4%;
+    padding: 2% 4%;
+    background-color: gainsboro;
+    border-radius: 1rem;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+.course-details div div{
+    margin-bottom: 5%;
+}
+.course-details h3{
+    font-size: 1.5rem;
+    color: rgb(143, 90, 212);
+}
+.course-details p{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.course-details .hr{
+    background-color: gray;
+    height: 1px;
+}
+
+/* .container-3 */
+
+.container-3{
+    background-color: rgb(143, 90, 212);;  
+    display: flex;
+    flex-direction: column;
+    padding: 5% 0;
+}
+.container-3 h1{
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.container-3 .jobs{
+    width: 70%;
+    margin-left: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.container-3 .jobs .job{
+    background-color: rgb(199, 199, 199);
+    word-break: break-all;
+    margin: .5rem;
+    padding: .8rem;
+    border-radius: .5rem;
+}
+.job p{
+    font-size: 1.5rem;
+}
+
+
+.container-4 .faq-section{
+    margin: 5% 10%;
+}
+
+
+@keyframes fade{
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
